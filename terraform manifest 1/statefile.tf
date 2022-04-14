@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "azurerm" {
     resource_group_name  = "azurerm_resource_group.project.name"
@@ -5,4 +6,4 @@ terraform {
     container_name       = "project1"
     key                  = "terraform.tfstate"
   }
-}
+*/
