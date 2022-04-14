@@ -14,4 +14,7 @@ resource "azurerm_resource_group" "myrg1" {
   name     = "myrg"
 
 }
+output "rgname" {
+  value = "${azurerm_resource_group.myrg1.name}"
+}
 
