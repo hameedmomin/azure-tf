@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "azurerm" {
-  alias          = "dev"
   features {}
 }
 
