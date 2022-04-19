@@ -3,9 +3,9 @@ resource "random_string" "local" {
   upper                    = false
   special                  = true
 }
-resource "azurerm_storage_account" "example" {
+resource "azurerm_storage_account" "storage" {
   depends_on               = [azurerm_resource_group.dev]
-  name                     = "my-${random_string.local.id}"
+  name                     = "my${random_string.local.id}"
   resource_group_name      = azurerm_resource_group.dev.name
   location                 = azurerm_resource_group.dev.location
   account_tier             = "Standard"
