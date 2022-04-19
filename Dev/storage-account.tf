@@ -12,8 +12,8 @@ resource "azurerm_storage_account" "example" {
 
 terraform {
   backend "azurerm" {
-    resource_group_name  = "${azurerm_resource_group.dev.name}"
-    storage_account_name = "${azurerm_storage_account.example.name}"
+    resource_group_name  = "Dev"
+    storage_account_name = "hameed123"
     container_name       = "tfstatefiles"
     key                  = "terraform.tfstate"
   }
