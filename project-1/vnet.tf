@@ -6,10 +6,10 @@ resource "azurerm_virtual_network" "dev" {
   address_space       = ["10.0.0.0/16"]
   dns_servers         = ["10.0.0.4", "10.0.0.5"]
 
-  subnet {
+/*  subnet {
     name              = "subnet1"
     address_prefix    = "10.255.0.0/24"
-  }
+  }*/
 
 /*  subnet {
     name              =  "subnet2"
@@ -29,10 +29,10 @@ resource "azurerm_virtual_network" "pro" {
   address_space       = ["10.0.1.0/16"]
   dns_servers         = ["10.0.10.0", "10.0.11.0"]
 
-  subnet {
+/*  subnet {
     name              = "subnet1"
     address_prefix    = "10.0.255.0/24"
-  }
+  }*/
 
   /*  subnet {
       name              =  "subnet2"
