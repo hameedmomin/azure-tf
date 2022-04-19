@@ -5,8 +5,8 @@ resource "azurerm_resource_group" "dev" {
 
 }
 
-resource "azurerm_resource_group" "pro" {
+/*resource "azurerm_resource_group" "pro" {
   provider            = azurerm.pro
   location            = "West US"
   name                = "pro-rgroup"
-}
+}*/
