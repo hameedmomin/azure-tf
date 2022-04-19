@@ -1,9 +1,16 @@
 terraform {
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+    azurerm                = {
+      source               = "hashicorp/azurerm"
+      version              = "=3.0.0"
     }
+  }
+
+  backend "azurerm" {
+    resource_group_name  = "terraform-rg"
+    storage_account_name = var.backend
+    container_name       = "tfstatefiles"
+    key                  = "terraform.tfstate"
   }
 }
 
@@ -14,7 +21,10 @@ provider "azurerm" {
 
 # Create a resource group
 resource "azurerm_resource_group" "dev" {
-  name     = "Dev"
-  location = "East US"
+  name                   = "Dev"
+  location               = "East US"
 }
 
+terraform {
+
+}
