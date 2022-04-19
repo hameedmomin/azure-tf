@@ -1,7 +1,7 @@
 resource "random_string" "local" {
   length                   = 16
   upper                    = false
-  special                  = true
+  special                  = false
 }
 resource "azurerm_storage_account" "storage" {
   depends_on               = [azurerm_resource_group.dev]
