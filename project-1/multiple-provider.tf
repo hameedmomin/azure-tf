@@ -8,11 +8,11 @@ terraform {
 }
 
 provider "azurerm" {
-  alias          = "dev.eastus"
+  alias          = "dev"
   features {}
 }
 
 provider "azurerm" {
-  alias          = "pro.westus"
+  alias          = "pro"
   features {}
 }
