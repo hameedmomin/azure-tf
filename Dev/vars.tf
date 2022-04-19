@@ -21,3 +21,4 @@ variable "backend" {
   type                    = string
 
 }
+#variable "storage account name" {}
