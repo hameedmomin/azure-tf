@@ -1,17 +1,17 @@
 variable "rg-name" {
   description = "Resource Group Name"
   default     = "project"
-  type = string
+  type        = string
 }
 
 variable "environment" {
-  default = "dev"
+  default     = "dev"
   description = "Environment name"
-  type = string
+  type        = string
 }
 
 variable "rg-location" {
-  default = "east us"
+  default     = "east us"
   description = "Resource location"
-  type = string
+  type        = string
 }
