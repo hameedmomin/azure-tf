@@ -16,9 +16,8 @@ provider "azurerm" {
   }
 }
 
-/*
 provider "azurerm" {
   alias          = "pro"
   features {}
 
-}*/
+}
