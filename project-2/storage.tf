@@ -3,7 +3,7 @@ resource "azurerm_storage_account" "project2" {
   account_replication_type                     = "GRS"
   account_tier                                 = "Standard"
   location                                     = azurerm_resource_group.project2.location
-  name                                         = "DEV-${random_string.locals.id}"
+  name                                         = "dev-${random_string.locals.id}"
   resource_group_name                          = azurerm_resource_group.project2.name
 }
 
