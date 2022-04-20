@@ -1,3 +1,4 @@
+/*
 terraform {
   backend "azurerm" {
 
@@ -8,3 +9,4 @@ terraform {
 
   }
 }
+*/
