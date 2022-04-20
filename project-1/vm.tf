@@ -8,7 +8,7 @@ resource "azurerm_linux_virtual_machine" "myvm" {
 
   admin_ssh_key {
     username                                 = "adminuser"
-    public_key                               = file("${path.module}/ssh-key/terraform-azure.pub")
+    public_key                               = file("./ssh-key/terraform-azure.pub")
   }
 
   os_disk {
