@@ -1,4 +1,4 @@
-resource "azurerm_linux_virtual_machine" "myvm" {
+resource "azurerm_linux_virtual_machine" "firstvm" {
   name                                       = "vm-1"
   resource_group_name                        = azurerm_resource_group.dev.name
   location                                   = azurerm_resource_group.dev.location
