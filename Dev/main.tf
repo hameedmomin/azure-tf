@@ -18,3 +18,7 @@ resource "azurerm_resource_group" "dev" {
 provider "azurerm" {
   features {}
 }
+
+output "rg-name" {
+  value = "${azurerm_resource_group.dev.id}"
+}

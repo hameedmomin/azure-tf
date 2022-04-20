@@ -11,7 +11,6 @@ resource "random_string" "locals" {
 
 }
 
-
 resource "azurerm_virtual_network" "dev" {
   name                                        = "${var.PREFIX}-${var.ENV}-vnet"
   depends_on                                  = [azurerm_resource_group.project2]
