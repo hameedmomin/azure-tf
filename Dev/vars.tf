@@ -16,9 +16,9 @@ variable "rg-location" {
   type        = string
 }
 
-variable "storage_account_name" {
+/*variable "storage_account_name" {
   default                 = "hameed123"
   description             = "Storage Account Name"
   type                    = string
 
-}
+}*/
