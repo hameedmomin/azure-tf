@@ -6,10 +6,10 @@ resource "azurerm_linux_virtual_machine" "myvm" {
   admin_username                             = "adminuser"
   network_interface_ids                      = [azurerm_network_interface.nic.id]
 
-  admin_ssh_key {
+/*  admin_ssh_key {
     username                                 = "adminuser"
     public_key                               = file("~/terrafrom-azure.pub")
-  }
+  }*/
 
   os_disk {
     name                                     = "mydisk"
