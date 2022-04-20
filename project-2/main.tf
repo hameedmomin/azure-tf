@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "project2" {
 resource "random_string" "locals" {
   length                                       = 16
   lower                                        = false
-  upper                                        = false
+  upper                                        = true
   special                                      = false
   override_special                             = "-/@"
 
