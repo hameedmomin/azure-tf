@@ -5,7 +5,7 @@ resource "azurerm_linux_virtual_machine" "firstvm" {
   size                                       = "Standard_F2"
   admin_username                             = "adminuser"
   network_interface_ids                      = [azurerm_network_interface.nic.id]
-  disable_password_authentication            = false
+#  disable_password_authentication            = false
 
 /*  admin_ssh_key {
     username                                 = "adminuser"
