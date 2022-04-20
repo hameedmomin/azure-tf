@@ -6,7 +6,8 @@ resource "random_string" "locals" {
   length                                       = 16
   lower                                        = false
   upper                                        = false
-  special                                      = "-/@"
+  special                                      = false
+  override_special                             = "-/@"
 
 }
 
