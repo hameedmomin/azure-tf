@@ -21,7 +21,15 @@ resource "azurerm_virtual_network" "dev" {
     environment       = "Dev-01"
   }
 }
-resource "azurerm_virtual_network" "pro" {
+resource "azurerm_subnet" "mysub" {
+  name                 = "dev-subnets"
+  resource_group_name  = "azurerm_resource_group.dev.name"
+  virtual_network_name = "azurerm_virtual_network.dev.name"
+  address_prefixes     = ["10.0.1.0/24"]
+}
+
+
+/*resource "azurerm_virtual_network" "pro" {
   name                = "pro-vnet"
   depends_on          = [azurerm_resource_group.dev]
   location            = azurerm_resource_group.dev.location
@@ -29,21 +37,21 @@ resource "azurerm_virtual_network" "pro" {
   address_space       = ["10.1.0.0/16"]
   dns_servers         = ["10.10.0.0", "10.11.0.0"]
 
-/*  subnet {
+  subnet {
     name              = "subnet1"
     address_prefix    = "10.0.255.0/24"
-  }*/
+  }
 
-  /*  subnet {
+    subnet {
       name              =  "subnet2"
       address_prefix    = "10.0.2.0/24"
       security_group    = azurerm_network_security_group.example.id
-    }*/
+    }
 
   tags = {
     environment       = "Pro-01"
   }
-}
+}*/
 
 /*
 resource "azurerm_network_security_group" "example" {
