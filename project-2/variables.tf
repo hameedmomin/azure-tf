@@ -1,2 +1,6 @@
-variable "ENV"    {}
-variable "PREFIX" {}
+variable "ENV"    {
+  default        = "dev"
+}
+variable "PREFIX" {
+  default        = "IT"
+}
