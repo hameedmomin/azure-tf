@@ -31,7 +31,7 @@ resource "azurerm_subnet" "mysub" {
 
 resource "azurerm_network_interface" "nic" {
   location                                    = azurerm_resource_group.dev.location
-  name                                        = dev-nic
+  name                                        = "dev-nic"
   resource_group_name                         = azurerm_resource_group.dev.name
   ip_configuration {
     name                                      = "internal"
