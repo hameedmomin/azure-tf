@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "project2" {
   resource_group_name                          = azurerm_resource_group.project2.name
 }
 
-resource "azurerm_storage_container" "example" {
+resource "azurerm_storage_container" "Storage" {
   depends_on                                   = [azurerm_storage_account.project2]
   name                                         = "${var.ENV}-storage"
   storage_account_name                         = azurerm_storage_account.project2.name
