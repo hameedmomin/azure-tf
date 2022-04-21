@@ -9,6 +9,13 @@ resource "azurerm_network_security_group" "nsg" {
   depends_on          = [azurerm_subnet.websubnets]
   location            = azurerm_resource_group.project2.location
   resource_group_name = azurerm_resource_group.project2.name
+
+}
+resource "azurerm_subnet_network_security_group_association" "websubnet-nsg-association" {
+  depends_on                = [azurerm_network_security_rule.nsg-rule] # Every NSG Rule Association will disassociate NSG from Subnet and Associate it, so we associate it only after NSG is completely created - Azure Provider Bug https://github.com/terraform-providers/terraform-provider-azurerm/issues/354
+  subnet_id                 = azurerm_subnet.websubnets.id
+  network_security_group_id = azurerm_network_security_group.nsg.id
+
 }
 
 locals {
