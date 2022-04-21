@@ -6,6 +6,7 @@ resource "azurerm_subnet" "db" {
 }
 
 resource "azurerm_network_security_group" "db" {
+  depends_on          = [azurerm_subnet.db]
   location            = azurerm_resource_group.project2.location
   name                = "${azurerm_subnet.db.name}"
   resource_group_name = azurerm_resource_group.project2.location
