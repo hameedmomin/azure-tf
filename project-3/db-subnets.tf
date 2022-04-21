@@ -19,10 +19,9 @@ resource "azurerm_subnet_network_security_group_association" "dbsubnet-nsg-assoc
 
 locals {
   db_inbound_ports_map = {
-    "100" : "80", # If the key starts with a number, you must use the colon syntax ":" instead of "="
-    "110" : "443",
-    "120" : "8080",
-    "130" : "22"
+    "100" : "3306", # If the key starts with a number, you must use the colon syntax ":" instead of "="
+    "110" : "1433",
+    "120" : "5432"
   }
 }
 ## NSG Inbound Rule for dbTier Subnets

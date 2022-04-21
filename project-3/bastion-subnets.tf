@@ -19,10 +19,8 @@ resource "azurerm_subnet_network_security_group_association" "bastionsubnet-nsg-
 
 locals {
   bastion_inbound_ports_map = {
-    "100" : "80", # If the key starts with a number, you must use the colon syntax ":" instead of "="
-    "110" : "443",
-    "120" : "8080",
-    "130" : "22"
+    "100" : "22", # If the key starts with a number, you must use the colon syntax ":" instead of "="
+    "110" : "3389"
   }
 }
 ## NSG Inbound Rule for bastionTier Subnets
