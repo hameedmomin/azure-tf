@@ -9,7 +9,7 @@ resource "azurerm_network_security_group" "bastion" {
   depends_on          = [azurerm_subnet.bastion]
   location            = azurerm_resource_group.project2.location
   name                = "${azurerm_subnet.bastion.name}"
-  resource_group_name = azurerm_resource_group.project2.location
+  resource_group_name = azurerm_resource_group.project2.name
 }
 
 resource "azurerm_subnet_network_security_group_association" "bastionsubnet-nsg-association" {
