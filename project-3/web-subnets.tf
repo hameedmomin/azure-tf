@@ -27,6 +27,7 @@ resource "azurerm_network_security_rule" "nsg-rule" {
   source_port_range           = "*"
   source_address_prefix       = "*"
   destination_address_prefix  = "*"
+  destination_port_range      = each.value
   priority                    = each.key
   protocol                    = "Tcp"
   resource_group_name         = azurerm_resource_group.project2.name
